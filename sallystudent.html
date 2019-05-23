@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Resume for Sally Student, a highly qualified software engineer. Contains her education, work history and contact information.">
+    <title>Sally Student's Resume</title>
+    <link href="sallystudent.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+        <div id="application-root"></div>
+        <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+        </script>
+        <script
+          src="https://unpkg.com/react@16/umd/react.development.js">
+        </script>
+        <script
+          src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+        </script>
+        <script type="text/babel">
+          function App(props) {
+            return (
+              <header>
+                {props.children}
+              </header>
+            );
+          }
+    
+          // Nested elements inside the App
+          ReactDOM.render(
+            <App className='my-class'>
+                <header>
+                    <h1>Sally Student</h1>
+                    <h2>Software Engineer</h2>
+                </header>
+                <main>
+                    <section>
+                        <h3>Contact Information</h3>
+                        <address>
+                            Sally Student<br/>
+                            Email: <a href="mailto:sally.student@gmail.com">sally.student@gmail.com</a><br/>
+                            Phone: <a href="tel:+1-555-867-5309">+1-555-867-5309</a><br/>
+                        </address>
+                        <img src="https://ia.media-imdb.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_UX214_CR0,0,214,317_AL_.jpg"
+                        alt="Picture of Sally Student"></img>
+                    </section>
+
+                    <section>
+                        <h3>Education</h3>
+                        <p>Stanford University<br/>
+                        B.S. in Computer Science<br/>
+                        Graduated with honors - Class of 2014</p>
+                    </section>
+                    <br/>
+                    <section>
+                        <h3>Employment History</h3>
+                        <ul>
+                            <li>Google</li>
+                            Internship - Search Engine Optimization<br/>
+                            June 2014 - June 2015<br/>
+                            Assisted with a project to present users with more accurate top hits while not sacrificing query time. Developed in Go.
+                            <li>Discord</li>
+                            Software Engineer<br/>
+                            June 2015 - Present<br/>
+                            Backend development for voice and chat systems using Elixir/Erlang, Python, Go, Cassandra, Redis, Elasticsearch, and C++.
+                        </ul>
+                    </section>
+                </main>
+            </App>,
+            document.querySelector('#application-root')
+          );
+        </script>
+  </body>
+</html>
